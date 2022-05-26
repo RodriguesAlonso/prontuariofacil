@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+Cadastro Medico
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <form action="{{url_for("site.cadastro_medic")}}" , method="post">
+        <h3>Cadastrar Médico</h3>
+        {{ form.csrf_token }}
+        <fieldset class="grid_medico">
+            <div>
+                {{ form.hidden_tag() }}
+                {{ form.nome.label }}
+                {{ form.nome() }}
+            </div>
+            <div>
+                {{ form.hidden_tag() }}
+                {{ form.crm.label}}
+                {{ form.crm(id="nome")}}
+            </div>
+            <div>
+                {{ form.hidden_tag() }}
+                {{ form.email.label }}
+                {{ form.email(id="nome")}}
+            </div>
+            <div>
+                {{ form.hidden_tag() }}
+                {{ form.senhalabel }}
+                {{ form.senha(id="nome") }}
+            </div>
+            <div>
+                {{ form.hidden_tag() }}
+                {{ form.confirmar_senha.label }}
+                {{ form.confirmar_senha(id="nome") }}
+            </div>
+        </fieldset>
+        {{ form.submit() }}
+    </form>
+</div>
+{% endblock content%}

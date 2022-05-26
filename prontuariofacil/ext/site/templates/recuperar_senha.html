@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Recuperar Senha{% endblock title %}
+
+{% block content %}
+
+<div class="text">
+    Recuperar Senha
+</div>
+
+    
+    <div class="card">
+        <form class="form" action="">
+            <div class="card-top">
+                <h2 class="title">Pront Fácil</h2>
+            </div>
+
+            <div class="card-group">
+                <label> Email para recuperação de senha </label>
+                <input type="text" name="email" placeholder="Digite seu email">
+                
+            </div>
+            
+            <div class="card-group">
+                <button type="submit"> Enviar </label>
+                    
+                </div>
+                
+                <div class="card-group">
+                <label> Código recebido por email </label>
+                <input type="text" name="Código" placeholder="Digite o Código">
+                
+            </div>
+
+            <div class="card-group">
+                <label> Crie sua nova senha </label>
+                <input type="text" name="password" placeholder="Digite a senha">
+                
+            </div>
+
+            <div class="card-group">
+                <label> Digite novamente a senha criada </label>
+                <input type="text" name="password" placeholder="Digite novamente a senha">
+
+            </div>
+            
+            <div class="card-group">
+                <button type="submit"> Autenticar </label>
+                    
+            </div>
+        </form>
+    </div>
+    
+    {% endblock content %}

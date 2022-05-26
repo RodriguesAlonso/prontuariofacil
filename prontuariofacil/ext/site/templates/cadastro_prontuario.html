@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+Cadastro Médico
+{% endblock title %}
+{% block content %}
+<div class="container">
+    <form action="{{url_for("site.cadastro_pront")}}" , method="post">
+        <h3>Cadastro do prontuário do paciente</h3>
+        {{ prontuario.csrf_token }}
+        <fieldset class="grid_prontuario">
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.nome.label }}
+                {{ prontuario.nome() }}
+            </div>
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.cpf.label}}
+                {{ prontuario.cpf()}}
+            </div>
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.nasc.label }}
+                {{ prontuario.nasc(id="nascimento")}}
+            </div>
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.sus.label }}
+                {{ prontuario.sus() }}
+            </div>
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.alergia.label }}
+                {{ prontuario.alergia() }}
+            </div>
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.doenca.label }}
+                {{ prontuario.doenca() }}
+            </div>
+            <div>
+                {{ prontuario.hidden_tag() }}
+                {{ prontuario.historico.label }}
+                {{ prontuario.historico() }}
+            </div>
+        </fieldset>
+        {{ prontuario.submit()}}
+    </form>
+</div>
+
+{% endblock content%}
