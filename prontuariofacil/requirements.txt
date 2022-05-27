@@ -36,7 +36,6 @@ pickleshare==0.7.5
 platformdirs==2.5.2
 pluggy==1.0.0
 prompt-toolkit==3.0.29
--e git+https://github.com/RodriguesAlonso/prontuariofacil.git@5f3b8d09d0184de02ee4b4e7d02e157568e0f6e1#egg=prontuario_facil
 psycopg2==2.9.3
 ptyprocess==0.7.0
 pure-eval==0.2.2
