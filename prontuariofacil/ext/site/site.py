@@ -42,4 +42,4 @@ def cadastro_medic():
     form = Form_medico()
     medico = Medico()
     submit_medico(medico, form)
-    return render_template("cadastro_medico.html", medico=form, name=name)
+    return render_template("cadastro_medico.html", form=form, name=name)
