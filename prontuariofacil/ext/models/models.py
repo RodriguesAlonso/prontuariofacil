@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request
 from flask import Blueprint
-from prontuariofacil.ext.models import form
 from prontuariofacil.ext.models.tables import Prontuario, Medico
 from prontuariofacil.ext.database import db
 
@@ -35,7 +34,7 @@ def submit_pront(prontuario, form):
 
 @models.route("/submit_medico", methods=["GET", "POST"])
 def submit_medico(medico, form):
-    if form.validate_on_submit:
+    if request.method == "POST":
         medico = Medico(
             nome=form.nome.data,
             crm=form.crm.data,
