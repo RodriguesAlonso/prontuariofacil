@@ -36,12 +36,12 @@ def submit_pront(prontuario, form):
 @models.route("/submit_medico", methods=["GET", "POST"])
 def submit_medico(medico, form):
     if form.validate_on_submit:
-        medico = Medico()
-        medico.nome = form.nome.data
-        medico.crm = form.crm.data
-        medico.email = form.email.data
-        medico.senha = form.senha.data
-
+        medico = Medico(
+            nome=form.nome.data,
+            crm=form.crm.data,
+            email=form.email.data,
+            senha=form.senha.data,
+        )
         db.session.add(medico)
         db.session.commit()
     return "Medico adicionado"
