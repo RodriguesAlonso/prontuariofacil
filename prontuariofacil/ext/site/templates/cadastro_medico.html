@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-Cadastro Medico
+Cadastro Médico
 {% endblock title %}
 
 {% block content %}
 <div class="container">
     <form action="{{url_for("site.cadastro_medic")}}" , method="post">
         <h3>Cadastrar Médico</h3>
-        {{ form.csrf_token }}
+        {{ medico.csrf_token }}
         <fieldset class="grid_medico">
             <div>
                 {{ form.hidden_tag() }}
