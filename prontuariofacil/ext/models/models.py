@@ -33,7 +33,7 @@ def submit_pront(prontuario, form):
     return "Prontuario adicionado"
 
 
-# @models.route("/submit_medico", methods=["GET", "POST"])
+@models.route("/submit_medico", methods=["GET", "POST"])
 def submit_medico(medico, form):
     if form.validate_on_submit:
         medico = Medico()
