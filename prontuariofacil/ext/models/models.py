@@ -1,4 +1,3 @@
-from crypt import methods
 from flask import Blueprint, render_template, request
 from flask import Blueprint
 from prontuariofacil.ext.models import form
@@ -7,7 +6,8 @@ from prontuariofacil.ext.database import db
 
 
 models = Blueprint(
-    "models", __name__, template_folder="templates", static_folder="static"
+    "models",
+    __name__,
 )
 
 
@@ -32,8 +32,9 @@ def submit_pront(prontuario, form):
         db.session.commit()
     return "Prontuario adicionado"
 
-#@models.route("/submit_medico", methods=["GET", "POST"])
-def submit_medico(medico, form):    
+
+# @models.route("/submit_medico", methods=["GET", "POST"])
+def submit_medico(medico, form):
     if form.validate_on_submit:
         medico = Medico()
         medico.nome = form.nome.data
