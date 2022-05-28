@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% from 'macros.html' import form_field %}
+
 
 {% block title %}
 Cadastro Médico
@@ -9,33 +11,32 @@ Cadastro Médico
     <form action="{{url_for("site.cadastro_medic")}}" , method="post">
         <h3>Cadastrar Médico</h3>
         {{ form.csrf_token }}
-        <fieldset class="grid_medico">
+        
             <div>
                 {{ form.hidden_tag() }}
                 {{ form.nome.label }}
-                {{ form.nome() }}
+                {{form_field(form.nome)}}
             </div>
             <div>
                 {{ form.hidden_tag() }}
                 {{ form.crm.label}}
-                {{ form.crm(id="nome")}}
+                {{form_field(form.crm)}}
             </div>
             <div>
                 {{ form.hidden_tag() }}
                 {{ form.email.label }}
-                {{ form.email(id="nome")}}
+                {{form_field(form.email,)}}
             </div>
             <div>
                 {{ form.hidden_tag() }}
-                {{ form.senhalabel }}
-                {{ form.senha(id="nome") }}
+                {{ form.senha.label }}
+                {{form_field(form.senha)}}
             </div>
             <div>
                 {{ form.hidden_tag() }}
                 {{ form.confirmar_senha.label }}
-                {{ form.confirmar_senha(id="nome") }}
+                {{form_field(form.confirmar_senha)}}
             </div>
-        </fieldset>
         {{ form.submit() }}
     </form>
 </div>

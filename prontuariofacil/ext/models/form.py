@@ -12,16 +12,18 @@ class Form_pront(FlaskForm):
     sus = wtf.StringField("SUS")
     alergia = wtf.StringField("Alergias")
     doenca = wtf.StringField("Doenças pré existentes")
-    historico = wtf.StringField("Histórico familiar")
+    historico = wtf.StringField(
+        "Histórico familiar",
+    )
     submit = wtf.SubmitField("Confirmar cadastro")
 
 
 class Form_medico(FlaskForm):
     nome = wtf.StringField("Nome completo", validators=[wtf.validators.DataRequired()])
     crm = wtf.StringField("CRM")
-    email = wtf.EmailField("E-mail", id="email", default="Seu e-mail...")
+    email = wtf.EmailField("E-mail", id="email")
     senha = wtf.PasswordField(
-        "senha",
+        "Senha",
         id="password",
         default="Sua senha...",
         validators=[wtf.validators.DataRequired()],

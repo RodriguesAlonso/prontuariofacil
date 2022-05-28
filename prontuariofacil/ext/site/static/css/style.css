@@ -8,12 +8,17 @@ body {
     background-color: #70ADA2;
 }
 
-.container01{
+.container{
+    
+}
+
+.index{
+    text-align: center;
     display: flex;
     background-color: white;
-    max-width: 700px;
+    max-width: 880px;
+    min-width: 400px;
     height: 300px;
-    width: 70%;
     border-radius: 0.7rem;
     padding: 20px;
     position: absolute;
@@ -22,19 +27,18 @@ body {
     transform: translate(-50%, -50%);   
     color: #19806d;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    justify-content:center;
     align-items: center;
     font-size: 2rem;
 }
 
 nav {
     width: 90%;
-    max-width: 1200px;
+    max-width: 880px;
     display: flex;
     margin: auto;
     margin-top: 1rem;
-    padding: 10px;
-    border-radius: 2rem;
+    padding: 5px;
+    border-radius: 1rem;
     background-color: #19806d;
     justify-content: center;
     flex-wrap: wrap;
@@ -42,18 +46,18 @@ nav {
 
 nav a {
     background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 0.5rem;
+    margin: 5px;
+    font-size: 1rem;
     color: #19806d;
     text-decoration: none;
 }
 
-form {
+form {    
     background-color: white;
-    max-width: 500px;
     width: 70%;
+    max-width: 800px;
     padding: 20px;
     position: absolute;
     left: 50%;
@@ -75,7 +79,22 @@ form input[type=password] {
     padding-left: 10px;
     margin: 10px 0;
 }
-
+#email{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+#nascimento{
+    width: 50%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 10px;
+    text-align: center;
+    color: rgb(177, 175, 175);
+}
 form input[type=submit] {
     width: 100%;
     height: 30px;
@@ -114,8 +133,6 @@ form input[type=password]:focus {
     line-height: 183px;
     text-align: center;
     color: #FFFFFF;
-
-
 }
 
 
@@ -125,7 +142,7 @@ form input[type=password]:focus {
     height: 500px;
     position: absolute;
     left: 50%;
-    top: 42%;
+    top: 60%;
     border-radius: 5px;
     Width: 529px;
     Height: 520px;
@@ -136,9 +153,7 @@ form input[type=password]:focus {
 
 
 .card-top {
-
     text-align: center;
-
 }
 
 .card-group {

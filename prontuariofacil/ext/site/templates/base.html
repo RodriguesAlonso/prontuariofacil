@@ -14,16 +14,18 @@
 </head>
 
 <body>
+    <div class="container">
     <nav>
-            <a href="{{url_for("site.index")}}">Home</a>
-            <a href="{{url_for("site.login")}}">Login</a>
-            <a href="{{url_for("site.recupera_senha")}}">Recuperar Senha</a>
-            <a href="{{url_for("site.cadastro_pront")}}">Cadastro Prontuario</a>
-            <a href="{{url_for("site.cadastro_medic")}}">Cadastro Médico</a>
+        <a href="{{url_for("site.index")}}">Home</a>
+        <a href="{{url_for("site.login")}}">Login</a>
+        <a href="{{url_for("site.recupera_senha")}}">Recuperar Senha</a>
+        <a href="{{url_for("site.cadastro_pront")}}">Cadastro Prontuario</a>
+        <a href="{{url_for("site.cadastro_medic")}}">Cadastro Médico</a>
     </nav>
-    {% block content %}
-    <h1>Content</h1>
-    {% endblock content%}
+        {% block content %}
+        <h1>Content</h1>
+        {% endblock content%}
+    </div>
 
     <script src="{{url_for("site.static", filename="/js/script.js")}}"></script>
 </body>
