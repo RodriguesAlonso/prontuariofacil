@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request
-from flask import Blueprint
 from prontuariofacil.ext.models.tables import Prontuario, Medico
 from prontuariofacil.ext.database import db
+
 
 
 models = Blueprint(
