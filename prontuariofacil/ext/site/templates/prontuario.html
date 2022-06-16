@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}
+Prontuario
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for("site.static",filename="/css/prontuario.css")}}" />
+{% endblock css%}
+
+{% block content %}
+
+
+<body>
+  <section class="form-section">
+    <h1>Prontuário Médico</h1>
+    <div class="form-wrapper">
+      <form>
+        <h2>Paciênte</h2>
+        <div class="form-wrapper">
+          <div class="input-block">
+            Cartão SUS:
+            <input type="text" nuber="numero" class="campo" placeholder="Número Cadastro" />
+            <div class="input-block">
+              Paciênte:
+              <input type="text" name="Usuarios" class="campo" placeholder="Nome Completo" />
+            </div>
+          </div>
+          <h2>Histórica Clinica Pregressa</h2>
+          <div class="input-msg">
+            <label for="Msg">
+              Doenças Infecciosas:<br /><textarea id="msg" required></textarea></label><br />
+            </div>
+          <div class="input-msg">
+            Alergias:<br /><textarea id="msg" required></textarea><br />
+          </div>
+          <div class="input-msg">
+            Transfusão Sanguínea:<br /><textarea id="msg" required></textarea><br />
+          </div>
+          <div class="input-msg">
+            Cirurgias:<br /><textarea id="msg" required></textarea><br />
+          </div>
+          <div class="input-msg">
+            Medicamentos de Uso Contínuo:<br /><textarea id="msg" required></textarea><br />
+          </div>
+          <div class="input-msg">
+            Outros:<br /><textarea id="msg" required></textarea><br />
+          </div>
+        </div>
+        <div>
+          <h2>Histórico Ocupacional</h2>
+          <div class="input-msg">
+            Funcões Anteriores:<br /><textarea id="msg" required></textarea><br />
+          </div>
+          <div class="input-msg">
+            Acidentes de Trabalho:<br /><textarea id="msg" required></textarea><br />
+          </div>
+        </div>
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+    </div>
+  </section>
+  <ul class="squares"></ul>
+  {% endblock content %}
+  
+
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Blueprint, render_template
 from prontuariofacil.ext.models.form import Form_pront, Form_medico
 from prontuariofacil.ext.models.models import submit_pront, submit_medico
@@ -43,3 +44,11 @@ def cadastro_medic():
     medico = Medico()
     submit_medico(medico, form)
     return render_template("cadastro_medico.html", form=form, name=name)
+
+@site.route("/prontuario", methods=["GET", "POST"])
+def prontuario():
+    return render_template("prontuario.html")
+
+@site.route("/admin/")
+def admin():
+    render_template("admin/index.html")
